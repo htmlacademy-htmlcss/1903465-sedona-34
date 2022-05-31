@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("./fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -11,7 +11,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("./fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -55,6 +55,7 @@ img {
 
 .text {
   margin: 0;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -62,6 +63,7 @@ img {
 
 .subject {
   margin: 0;
+  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -76,12 +78,12 @@ img {
 /* Colors */
 .cold-light-blue {
   background-color: #83b3d3;
-  /* color: #ffffff; */
-}
-
-.cold-light-blue .advantages-item-text {
   color: #ffffff;
 }
+
+/* .cold-light-blue .advantages-item-text {
+  color: #ffffff;
+} */
 
 .special-cold-light12 {
   background: rgba(131, 179, 211, 0.12);
@@ -100,6 +102,8 @@ img {
 
 .tagline {
   display: block;
+  margin: 0;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -115,6 +119,17 @@ img {
   text-decoration: none;
 }
 
+.favorite-number {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  /* color: #ffffff; */
+}
+
+.navigation-button {
+  color: #ffffff;
+}
+
 .promo {
   padding-top: 51px;
   padding-bottom: 80px;
@@ -125,11 +140,17 @@ img {
 }
 
 .advantages-text-block {
-  width: 720px;
+  width: 740px;
   padding-top: 60px;
+  padding-right: 10px;
   padding-bottom: 81px;
+  padding-left: 10px;
   margin: 0 auto;
   text-align: center;
+}
+
+.advantages-tagline {
+  margin-bottom: 31px;
 }
 
 .advantages-list {
@@ -144,20 +165,11 @@ img {
   padding-bottom: 92px;
   /* padding-left: 85px; */
   text-align: center;
-  background-color: #83b3d3;
 }
 
 .advantages-subject {
   margin-bottom: 30px;
 }
-
-/* .advantages-desc {
-  margin: 0;
-} */
-
-/* .advantages-image {
-  display: inline-block;
-} */
 
 .features-list {
   /* display: inline-block; */
@@ -173,6 +185,7 @@ img {
   padding-top: 84px;
   padding-bottom: 70px;
   text-align: center;
+  color: #000000;
 }
 
 .features-item:nth-child(odd) {
@@ -203,6 +216,7 @@ img {
   display: block;
   width: 574px;
   margin: 0 auto;
+  padding: 12px;
   /* text-align: center; */
 }
 
@@ -223,6 +237,20 @@ img {
 
 .subscribe-text {
   margin-bottom: 46px;
+}
+
+.subscribe-index .subscribe-text {
+  color: #ffffff;
+}
+
+.subscribe-field {
+  padding: 20px 22px 19px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px 0 0 10px;
 }
 
 .subscribe-button {
@@ -284,7 +312,7 @@ img {
 }
 
 .button-submit {
-  font-weight: 700;
+  background-color: #82b3d3;
 }
 
 .button-clear {
@@ -292,7 +320,12 @@ img {
   text-transform: none;
 }
 
+.catalog-products {
+  padding-top: 60px;
+}
+
 .inner-text-search {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;

@@ -35,7 +35,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link button" href="#">Хочу сюда!</a>
+            <a class="button navigation-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -110,22 +110,24 @@
           </form>
         </section>
       </div>
-      <section>
-        <p class="inner-text-search">Найдено гостиниц: 38</p>
-        <select class="sorting-control" aria-label="Сортировка.">
-          <option value="popular">Сначала дешёвые</option>
-          <option value="cheap">Сначала популярные</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <a class="button button-table" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="button button-slideshow" href="#">
-          <span class="visually-hidden">Показать карточку</span>
-        </a>
-        <a href="#" class="button button-list">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+      <section class="catalog-products">
+        <div class="sorting-container">
+          <p class="inner-text-search">Найдено гостиниц: 38</p>
+          <select class="sorting-control" aria-label="Сортировка.">
+            <option value="popular">Сначала дешёвые</option>
+            <option value="cheap">Сначала популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <a class="button button-table" href="#">
+            <span class="visually-hidden">Показать карточки.</span>
+          </a>
+          <a class="button button-slideshow" href="#">
+            <span class="visually-hidden">Показать карточку.</span>
+          </a>
+          <a class="button button-list" href="#">
+            <span class="visually-hidden">Показать список.</span>
+          </a>
+        </div>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="product.html">
@@ -134,8 +136,8 @@
             </a>
             <span class="product-card-type">Гостиница</span>
             <span class="product-card-price">От 4000 ₽</span>
-            <a class="button product-card-button" href="#">подробнее</a>
-            <a class="button product-card-button" href="#">в избранное</a>
+            <a class="button button-card-more" href="#">подробнее</a>
+            <a class="button button-card-favorites" href="#">в избранное</a>
             <p class="stars stars-4">
               <span class="visually-hidden">4 звезды.</span>
             </p>
@@ -219,7 +221,7 @@
         <p class="subscribe-text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscribe-email">
-            <input class="field" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email" required>
+            <input class="subscribe-field" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email" required>
           </label>
           <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
