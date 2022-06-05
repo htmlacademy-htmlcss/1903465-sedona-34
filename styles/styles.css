@@ -214,10 +214,7 @@ img {
 
 .advantages-item {
   display: flex;
-  /* padding-top: 92px; */
-  /* padding-right: 85px; */
-  /* padding-bottom: 92px; */
-  /* padding-left: 85px; */
+  flex-wrap: wrap;
   text-align: center;
   background-color: #83b3d3;
   color: #ffffff;
@@ -263,6 +260,33 @@ img {
 
 .advantages-image {
   display: inline-block;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.features-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
+}
+
+.features-item-basic-color {
+  background-color: #ffffff;
+}
+
+.features-text-wrapper {
+  width: 400px;
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.features-subject {
+  margin-bottom: 30px;
 }
 
 .search {
