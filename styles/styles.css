@@ -480,6 +480,7 @@ img {
 .catalog-filter-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .control-label {
@@ -553,6 +554,7 @@ img {
   margin: 0;
   margin-bottom: 66px;
   padding: 0;
+  list-style-type: none;
 }
 
 .product-card {
