@@ -138,8 +138,11 @@ img {
 }
 
 .header-logo {
-  display: block;
   margin-right: 30px;
+}
+
+.logo {
+  display: block;
 }
 
 .navigation {
@@ -163,20 +166,24 @@ img {
   margin-left: auto;
 }
 
-.navigation-user .navigation-link {
-  min-width: 19px;
-  min-height: 22px;
-}
-
 .navigation-link {
   display: block;
-  padding: 20px 17px;
+  padding: 19px 17px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+/* .navigation-link-current {
+  border-bottom: 2px solid #756257;
+} */
+
+.navigation-user .navigation-link {
+  min-width: 19px;
+  min-height: 22px;
 }
 
 .favorite-number {
@@ -432,7 +439,7 @@ img {
 .inner-filter-wrapper {
   padding-top: 35px;
   padding-right: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 55px;
   padding-left: 70px;
   color: #ffffff;
   background-color: #82b3d3;
@@ -450,10 +457,15 @@ img {
 }
 
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
   font-size: 16px;
+}
+
+.breadcrumbs-item {
+  margin-right: 26px;
 }
 
 .catalog-filter {
@@ -486,14 +498,19 @@ img {
   list-style-type: none;
 }
 
+.catalog-filter-item {
+  margin-bottom: 15px;
+}
+
 .control-label {
   display: inline-block;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .filter-column-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: end;
 }
 
 .button-submit {
@@ -519,8 +536,8 @@ img {
 .sorting-container {
   display: flex;
   align-items: center;
-  padding-top: 55px;
-  padding-bottom: 33px;
+  padding-top: 45px;
+  padding-bottom: 43px;
 }
 
 .inner-text-search {
@@ -534,12 +551,19 @@ img {
 
 .sorting-control {
   width: 290px;
+  padding-top: 10px;
+  padding-right: 48px;
+  padding-bottom: 10px;
+  padding-left: 20px;
   margin-right: 78px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .button-sorting {
@@ -549,11 +573,13 @@ img {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #e5e5e5;
+  box-sizing: border-box;
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
   margin: 0;
   margin-bottom: 66px;
   padding: 0;
@@ -561,49 +587,78 @@ img {
 }
 
 .product-card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 211px auto min-content min-content min-content;
+  gap: 16px 20px;
   width: 340px;
   padding: 20px;
   box-sizing: border-box;
 }
 
-.product-card + .product-card {
-  margin-left: 8px;
+.product-card-image-link {
+  grid-column: 1 / -1;
 }
 
-.product-card-link {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+.product-card-title-link {
+  grid-column: 1 / -1;
   color: #000000;
   text-decoration: none;
 }
 
 .product-card-title {
   margin: 0;
-  margin-bottom: 16px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
 }
 
 .product-card span {
-  display: inline-block;
   color: #333333;
 }
 
+.product-card-type {
+  grid-column: 1 / 2;
+}
+
+.product-card-price {
+  grid-column: 2 / 3;
+}
+
+.button-basic {
+  grid-column: 1 / 2;
+}
+
 .button-second {
+  grid-column: 2 / 3;
   background-color: #83b3d3;
 }
 
 .button-select {
+  grid-column: 2 / 3;
   background-color: #7db54f;
 }
 
+.stars {
+  grid-column: 1 / 2;
+  margin: 0;
+  background-image: url("../images/icons/icon-star.svg");
+  background-size: 25px 17px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
 .product-card-rating {
+  grid-column: 2 / 3;
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
   text-transform: uppercase;
+  text-align: center;
+  background-color: #f2f2f2;
 }
 
 .pagination-wrapper {
@@ -654,9 +709,15 @@ img {
 
 .select-control {
   width: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
