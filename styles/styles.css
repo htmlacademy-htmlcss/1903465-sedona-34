@@ -517,8 +517,8 @@ img {
   margin: 0 auto;
 }
 
-.subscribe-field {
-  width: 600px;
+.field {
+  margin: 0;
   padding: 20px 22px 19px;
   font-family: inherit;
   font-size: 18px;
@@ -526,8 +526,37 @@ img {
   font-weight: 400;
   background-color: #f2f2f2;
   border: none;
-  border-radius: 10px 0 0 10px;
   box-sizing: border-box;
+}
+
+.field:hover,
+.field:focus {
+  background-color: #e6e6e6;
+}
+
+.field:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.field:active {
+  opacity: 0.3;
+}
+
+.field:disabled,
+.field:disabled:hover {
+  opacity: 0.3;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.field:not(:placeholder-shown):invalid {
+  background-color: #ffffff;
+  outline: 2px solid #ff5757;
+  box-shadow: none;
+}
+
+.subscribe-field {
+  width: 600px;
+  border-radius: 10px 0 0 10px;
 }
 
 .subscribe-button {
@@ -658,6 +687,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
@@ -665,11 +695,27 @@ img {
   list-style-type: none;
 }
 
+.breadcrumbs-item {
+  position: relative;
+  padding-right: 26px;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  right: 10px;
+  bottom: -2px;
+  content: url("../images/icons/icon-breadcrumb-arrow.svg");
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
 .breadcrumbs-link {
   display: block;
   min-width: 12px;
   min-height: 12px;
-  padding: 10px;
+  /* padding: 10px 5px; */
 }
 
 .breadcrumbs-link:hover {
@@ -680,26 +726,16 @@ img {
   opacity: 0.3;
 }
 
+.breadcrumbs-link:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
 .breadcrumbs-link-home {
   background-image: url("../images/icons/icon-breadcrumb-home.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: -2px 11px;
-}
-
-.breadcrumbs-item {
-  position: relative;
-}
-
-.breadcrumbs-item::after {
-  position: absolute;
-  left: 24px;
-  bottom: 2px;
-  content: url("../images/icons/icon-breadcrumb-arrow.svg");
-}
-
-.breadcrumbs-item:last-child::after {
-  /* content: none; */
+  background-size: 13px 13px;
 }
 
 .catalog-filter {
@@ -707,20 +743,144 @@ img {
 }
 
 .catalog-filter-group {
-  width: 216px;
+  padding: 0.01em 0 0 0;
   margin: 0;
-  padding: 0;
+  min-width: 0;
+  width: 216px;
   text-transform: capitalize;
-  border: none;
+  border: 0;
 }
 
 .catalog-filter-group-range {
   width: 288px;
   margin-left: 107px;
   margin-right: 74px;
+  text-transform: none;
+}
+
+.range-wrapper-inputs {
+  position: relative;
+  display: flex;
+  width: 287px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.range-wrapper-inputs::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 48px;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.catalog-filter-label {
+  position: relative;
+}
+
+.range-input {
+  width: 142px;
+  padding: 14px 0 13px 19px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input:active {
+  background-color: #756257;
+  outline: 2px solid #ffffff;
+}
+
+.range-input:focus {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2;
+  border-radius: 4px 0 0 4px;
+  outline-offset: -5px;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: #81b3d2;
+}
+
+.range-input-text {
+  position: absolute;
+  top: 11px;
+  right: 17px;
+  opacity: 0.3;
+}
+
+.range-scale {
+  position: relative;
+  width: 288px;
+  height: 4px;
+  background-color: #242424;
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  width: 228px;
+  height: 4px;
+  background-color: #ffffff;
+  border: transparent;
+  box-sizing: border-box;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-color: transparent;
+  box-sizing: border-box;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83b3d3;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
 }
 
 .catalog-filter-title {
+  display: table;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
