@@ -877,7 +877,6 @@ img {
 
 .catalog-filter-title {
   display: table;
-  float: left;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -895,6 +894,48 @@ img {
 
 .catalog-filter-item {
   margin-bottom: 15px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.control-input[type="checkbox"]:hover + .control-mark {
+  opacity: 0.6;
+}
+
+.control-input[type="checkbox"]:active + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:focus + .control-mark {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
+}
+
+.control-input:disabled + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  content: url("../images/icons/icon-checkbox.svg");
 }
 
 .control-label {
