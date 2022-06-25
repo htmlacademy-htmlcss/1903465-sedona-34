@@ -938,6 +938,35 @@ img {
   content: url("../images/icons/icon-checkbox.svg");
 }
 
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #3f5e72;
+  content: "";
+}
+
+.control-input[type="radio"]:hover + .control-mark,
+.control-input[type="radio"]:active + .control-mark {
+  background-color: #ffffff;
+}
+
+/* .control-input[type="radio"]:checked:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+  box-sizing: border-box;
+} */
+
+.control-input[type="radio"]:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
 .control-label {
   display: inline-block;
 }
