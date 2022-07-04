@@ -196,13 +196,15 @@ img {
 
 .navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 891px;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   width: 500px;
   margin: 0;
   padding: 0;
@@ -210,7 +212,7 @@ img {
 }
 
 .navigation-user {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   max-width: 300px;
   margin-left: auto;
 }
@@ -1043,12 +1045,12 @@ img {
   width: 287px;
   margin-top: 5px;
   margin-bottom: 29px;
-  border: 2px solid #ffffff;
+  /* border: 2px solid #ffffff; */
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-.range-wrapper-inputs::before {
+/* .range-wrapper-inputs::before {
   position: absolute;
   content: "";
   top: 0;
@@ -1059,7 +1061,7 @@ img {
   height: 48px;
   background-color: #ffffff;
   margin: auto;
-}
+} */
 
 .catalog-filter-label {
   position: relative;
@@ -1074,9 +1076,14 @@ img {
   line-height: 21px;
   color: #ffffff;
   background-color: transparent;
-  border: 2px solid transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
   box-sizing: border-box;
-  -moz-appearance: textfield;
+}
+
+.range-input-second {
+  border-left: transparent;
+  border-radius: 0 4px 4px 0;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1087,12 +1094,12 @@ img {
 
 .range-input:hover {
   border-color: rgba(255, 255, 255, 0.6);
-  border-radius: 4px 0 0 4px;
+  /* border-radius: 4px 0 0 4px; */
 }
 
 .range-input:active {
   background-color: #756257;
-  outline: 2px solid #ffffff;
+  /* outline: 2px solid #ffffff; */
 }
 
 .range-input:focus {
@@ -1103,6 +1110,16 @@ img {
   outline-width: 3px;
   outline-style: solid;
   outline-color: #81b3d2;
+}
+
+.range-input-second:focus {
+  /* border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2; */
+  border-radius: 0 4px 4px 0;
+  /* outline-offset: -5px;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: #81b3d2; */
 }
 
 .range-input-text {
@@ -1116,7 +1133,7 @@ img {
   position: relative;
   width: 288px;
   height: 4px;
-  background-color: #242424;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
 }
 
@@ -1352,28 +1369,25 @@ img {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #e5e5e5;
+  border-radius: 4px;
   box-sizing: border-box;
-}
-
-.card-grid-toggle:hover {
-  border: 2px solid #000000;
-  border-radius: 4px;
-}
-
-.card-grid-toggle:active {
-  border: 2px solid #000000;
-  border-radius: 4px;
-}
-
-.card-grid-toggle:focus {
-  outline: 2px solid #68a2ca;
-  border: transparent;
-  border-radius: 4px;
 }
 
 .card-grid-toggle-current {
   border: 2px solid #000000;
-  border-radius: 4px;
+}
+
+.card-grid-toggle:hover {
+  border: 2px solid #000000;
+}
+
+.card-grid-toggle:active {
+  border: 2px solid #000000;
+}
+
+.card-grid-toggle:focus {
+  border: none;
+  outline: 2px solid #68a2ca;
 }
 
 .card-grid-toggle-table {
