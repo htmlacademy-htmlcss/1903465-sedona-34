@@ -664,7 +664,7 @@ img {
 }
 
 .modal-container-close {
-  display: none;
+  /* display: none; */
 }
 
 .modal {
@@ -680,6 +680,10 @@ img {
 
 .modal-search {
   /* width: 715px; */
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
 }
 
 .modal-close-button {
@@ -722,7 +726,7 @@ img {
   margin: 0;
   margin-bottom: 63px;
   font-family: inherit;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -762,7 +766,7 @@ img {
 }
 
 .form-label {
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
@@ -771,7 +775,7 @@ img {
 .search-submit-button {
   width: 575px;
   min-height: 60px;
-  margin-top: 25px;
+  margin-top: 26px;
   padding: 7px 26px;
   font-size: 20px;
   line-height: 36px;
@@ -788,6 +792,7 @@ img {
 .field-date {
   width: 100%;
   padding: 13px 17px 12px;
+  font-weight: 700;
   border: 2px solid transparent;
   border-radius: 4px;
 }
@@ -826,14 +831,12 @@ img {
 
 .search-info-error {
   margin: 0;
-  margin-top: 9px;
   font-size: 16px;
   color: #ff5757;
 }
 
 .search-info {
   margin: 0;
-  margin-top: 9px;
   font-size: 16px;
   color: #333333;
 }
@@ -850,7 +853,7 @@ img {
 
 .numbers-wrapper button {
   position: relative;
-  width: 41px;
+  width: 43px;
   height: 50px;
   padding: 0;
   border: 2px solid transparent;
@@ -863,30 +866,55 @@ img {
   right: 0;
   bottom: 0;
   margin: auto;
+  opacity: 0.3;
+}
+
+.modal-numbers-icon-plus {
+  opacity: 0.3;
+}
+
+.button-minus:hover .modal-numbers-icon,
+.button-plus:hover .modal-numbers-icon-plus {
+  fill: #000000;
+}
+
+.button-minus:active .modal-numbers-icon,
+.button-plus:active .modal-numbers-icon-plus {
+  fill: #000000;
+  fill-opacity: 0.2;
+}
+
+.button-minus:focus .modal-numbers-icon,
+.button-plus:focus .modal-numbers-icon-plus {
+  fill: #000000;
+  outline: 3px solid #83b3d3;
+  outline-offset: 10px;
+  border-radius: 1px;
 }
 
 .field-number {
-  width: 51px;
+  width: 45px;
   height: 50px;
   padding: 13px 5px 12px;
+  font-weight: 700;
   text-align: center;
 }
 
 .form-label-of-children {
   align-self: center;
-  margin-right: 10px;
+  margin-right: 4px;
 }
-
 
 .form-label-icon {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-self: center;
   justify-self: end;
 }
 
 .tooltip {
   position: relative;
+  margin-top: 10px;
 }
 
 .tooltip-toggle {
