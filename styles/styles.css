@@ -312,6 +312,7 @@ img {
     url("../images/index-promo-background.jpg");
   background-position: 0 430px, 0 0;
   background-repeat: no-repeat, no-repeat;
+  text-align: center;
 }
 
 .advantages-text-block {
@@ -772,10 +773,11 @@ img {
 .search-submit-button {
   width: 575px;
   min-height: 60px;
-  margin-top: 26px;
+  margin-top: 30px;
   padding: 7px 26px;
   font-size: 20px;
   line-height: 36px;
+  border-radius: 10px;
 }
 
 .search-submit-button:focus {
@@ -828,12 +830,14 @@ img {
 
 .search-info-error {
   margin: 0;
+  font-weight: 400;
   font-size: 16px;
   color: #ff5757;
 }
 
 .search-info {
   margin: 0;
+  font-weight: 400;
   font-size: 16px;
   color: #333333;
 }
@@ -843,59 +847,83 @@ img {
 }
 
 .numbers-wrapper {
-  display: flex;
-  align-items: center;
-  width: 133px;
+  position: relative;
 }
 
-.numbers-wrapper button {
-  position: relative;
-  width: 43px;
-  height: 50px;
+.modal-number-button {
+  position: absolute;
+  top: 12px;
+  width: 25px;
+  height: 25px;
   padding: 0;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.modal-numbers-icon {
+.button-minus {
+  left: 14px;
+}
+
+.button-plus {
+  right: 14px;
+}
+
+.button-minus::before {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  opacity: 0.3;
+  content: "";
+  width: 13px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
 }
 
-.modal-numbers-icon-plus {
-  opacity: 0.3;
+.button-plus::before,
+.button-plus::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
 }
 
-.button-minus:hover .modal-numbers-icon,
-.button-plus:hover .modal-numbers-icon-plus {
-  fill: #000000;
+.button-plus::after {
+  transform: rotate(90deg);
+  right: 4px;
 }
 
-.button-minus:active .modal-numbers-icon,
-.button-plus:active .modal-numbers-icon-plus {
-  fill: #000000;
-  fill-opacity: 0.2;
+.modal-number-button:hover::before,
+.modal-number-button:hover::after {
+  background-color: #000000;
 }
 
-.button-minus:focus .modal-numbers-icon,
-.button-plus:focus .modal-numbers-icon-plus {
-  fill: #000000;
-  outline: 3px solid #83b3d3;
-  outline-offset: 10px;
-  border-radius: 1px;
+.modal-number-button:focus::before,
+.modal-number-button:focus::after {
+  background-color: #000000;
+}
+
+.modal-number-button:focus {
+  outline: none;
+  border-color: #83b3d3;
+}
+
+.modal-number-button:active::before,
+.modal-number-button:active::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-number-button:active {
+  outline: none;
 }
 
 .field-number {
-  width: 45px;
-  height: 50px;
-  padding: 13px 5px 12px;
+  width: 133px;
+  padding: 15px 50px 14px 50px;
   font-weight: 700;
   text-align: center;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .form-label-of-children {
@@ -912,7 +940,7 @@ img {
 
 .tooltip {
   position: relative;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .tooltip-toggle {
@@ -939,6 +967,7 @@ img {
   top: 46px;
   left: 50%;
   width: 256px;
+  min-height: 143px;
   padding: 15px 18px 18px 22px;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -992,6 +1021,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -1390,8 +1420,8 @@ img {
 }
 
 .card-grid-toggle:focus {
-  border: none;
-  outline: 2px solid #68a2ca;
+  outline: none;
+  border-color: #68a2ca;
 }
 
 .card-grid-toggle-table {
