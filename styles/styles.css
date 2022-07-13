@@ -90,6 +90,7 @@ img {
 .button-disabled,
 .button:disabled {
   background-color: #e5e5e5;
+  cursor: default;
 }
 
 .button-disabled:focus,
@@ -306,7 +307,7 @@ img {
 .promo {
   padding-top: 51px;
   padding-bottom: 80px;
-  background-color: #82b3d3;
+  background-color: #3f5e72;
   background-image:
     url("../images/index-promo-divider.svg"),
     url("../images/index-promo-background.jpg");
@@ -469,22 +470,16 @@ img {
 }
 
 .subscribe {
+  padding: 93px 50px;
   text-align: center;
 }
 
 .subscribe-index {
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #3f5e72;
   background-image: url("../images/subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.subscribe-wrapper {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 93px 50px;
-  box-sizing: border-box;
 }
 
 .subscribe-tagline {
@@ -512,6 +507,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  color: #000000;
   background-color: #f2f2f2;
   border: none;
   box-sizing: border-box;
@@ -804,8 +800,11 @@ img {
 }
 
 .date-button {
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
   background-image: url("../images/icons/icon-date.svg");
   background-repeat: no-repeat;
@@ -814,18 +813,6 @@ img {
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-}
-
-.form-arrival-date button {
-  position: absolute;
-  top: 14px;
-  right: 17px;
-}
-
-.form-departure-date button {
-  position: absolute;
-  top: 14px;
-  right: 17px;
 }
 
 .search-info-error {
@@ -863,10 +850,12 @@ img {
 
 .button-minus {
   left: 14px;
+  background-color: transparent;
 }
 
 .button-plus {
   right: 14px;
+  background-color: transparent;
 }
 
 .button-minus::before {
@@ -890,7 +879,7 @@ img {
 
 .button-plus::after {
   transform: rotate(90deg);
-  right: 4px;
+  right: 3px;
 }
 
 .modal-number-button:hover::before,
@@ -924,6 +913,13 @@ img {
   text-align: center;
   border-radius: 4px;
   box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
 }
 
 .form-label-of-children {
@@ -934,13 +930,13 @@ img {
 .form-label-icon {
   position: relative;
   display: flex;
-  align-self: center;
+  align-items: flex-end;
   justify-self: end;
 }
 
 .tooltip {
   position: relative;
-  margin-top: 5px;
+  display: flex;
 }
 
 .tooltip-toggle {
@@ -964,7 +960,7 @@ img {
 
 .tooltip-text {
   position: absolute;
-  top: 46px;
+  top: 42px;
   left: 50%;
   width: 256px;
   min-height: 143px;
@@ -1005,7 +1001,7 @@ img {
   padding-bottom: 56px;
   padding-left: 70px;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #3f5e72;
   background-image: url("../images/catalog/catalog-filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1124,7 +1120,7 @@ img {
 }
 
 .range-input-second {
-  border-left: transparent;
+  border-left-color: transparent;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1143,7 +1139,6 @@ img {
 }
 
 .range-input:focus {
-  border: 2px solid #ffffff;
   box-shadow: 0 0 0 3px #81b3d2;
   border-radius: 4px 0 0 4px;
   outline-offset: -5px;
@@ -1153,6 +1148,7 @@ img {
 }
 
 .range-input-second:focus {
+  border-left-color: #ffffff;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1265,8 +1261,10 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.control-input:disabled + .control-mark {
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label {
   opacity: 0.3;
+  cursor: default;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1375,6 +1373,7 @@ img {
   color: #333333;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background-color: inherit;
   background-image: url("../images/icons/icon-select-arrow.svg");
   background-repeat: no-repeat;
   background-position: 93% 48%;
@@ -1443,7 +1442,6 @@ img {
 }
 
 .catalog-products {
-  width: 1056px;
   padding-top: 23px;
   padding-left: 73px;
   padding-bottom: 24px;
